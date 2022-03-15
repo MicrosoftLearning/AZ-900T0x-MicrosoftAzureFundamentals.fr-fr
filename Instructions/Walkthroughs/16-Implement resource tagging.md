@@ -1,13 +1,19 @@
 ---
 wts:
-    title: '16 - Implémenter le balisage des ressources (5 minutes)'
-    module: 'Module 05 : Description des fonctionnalités d’identité, de gouvernance, de confidentialité et de conformité'
+  title: 16 - Implémenter le balisage des ressources (5 minutes)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
+ms.openlocfilehash: cc7a298eb03be3dfcbcc1c69cfa7409bc94c0640
+ms.sourcegitcommit: dfe52fea15c568547ba630e9b337ec8df957ad80
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "139213863"
 ---
-# 16 - Implémenter le balisage des ressources (5 minutes)
+# <a name="16---implement-resource-tagging-5-min"></a>16 - Implémenter le balisage des ressources (5 minutes)
 
 Au cours de cette procédure pas à pas, nous allons créer une affectation de stratégie qui exige un balisage, créer un compte de stockage et tester le balisage, afficher les ressources avec une balise spécifique et supprimer la stratégie de balisage.
 
-# Tâche 1 : Créer une affectation de stratégie 
+# <a name="task-1-create-a-policy-assignment"></a>Tâche 1 : Créer une affectation de stratégie 
 
 Au cours de cette tâche, nous allons configurer la stratégie **Exiger une balise pour les ressources** et l’assigner à notre abonnement. 
 
@@ -19,20 +25,20 @@ Au cours de cette tâche, nous allons configurer la stratégie **Exiger une bali
 
 4. Notez que la **Portée** de notre stratégie sera valable au niveau de l’abonnement. 
 
-5. Sous **Informations de base**, sélectionnez les points de suspension affichés en regard de la zone **Définition de la stratégie** (côté droit de la zone de texte). Dans la zone de **Recherche**, entrez la valeur **balise**. Une liste des stratégies associées au mot **balise** s’affiche. Faites défiler jusqu’à ce que vous trouviez la définition **Exiger une balise pour les ressources**, cliquez dessus puis cliquez sur **Sélectionner**.
+5. Sous **Informations de base**, sélectionnez les points de suspension affichés en regard de la zone **Définition de la stratégie** (côté droit de la zone de texte). Dans la zone de **Recherche**, entrez la valeur **balise**. Une liste des stratégies associées au mot **balise** s’affiche. Faites défiler jusqu’à trouver la définition **Exiger une étiquette et sa valeur sur les ressources**, cliquez sur celle-ci, puis sur **Sélectionner**.
 
-   ![Capture d’écran du volet Définitions disponibles avec l’option Exiger une balise pour les ressources activée.](../images/1701.png)
+   ![image](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  Sous l’onglet **Paramètres**, tapez **Contoso** comme nom de paire clé-valeur dans le champ **Société :** Cliquez sur **Examiner et créer**, puis sur **Créer**.
+6.  Sous l’onglet **Paramètres**, tapez **Company : Contoso ** pour le nom de la paire clé-valeur de l’étiquette. Cliquez sur **Examiner et créer**, puis sur **Créer**.
 
-    ![Capture d’écran du volet Attribuer une stratégie avec le nom de la balise renseigné.](../images/1702.png)
+  
 
-7. L’attribution de la stratégie **Exiger une balise pour les ressources** est à présent en vigueur. Lorsqu’une ressource est créée, elle doit inclure une balise avec la clé Entreprise : Contoso.
-   **Remarque : vous pouvez être amené à attendre jusqu’à 30 minutes pour que cette stratégie prenne effet.** 
+7. L’affectation de la stratégie **Exiger une étiquette et sa valeur sur les ressources** est à présent en place. Quand une ressource est créée, elle doit inclure une étiquette avec la clé Company : Contoso.
+   **Remarque : Vous pouvez être amené à attendre jusqu’à 30 minutes pour que cette stratégie soit appliquée.** 
 
-   ![Capture d’écran du volet Stratégie - Affectations avec l’affectation des emplacements autorisés en surbrillance.](../images/1703.png)
+  ![image](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
-# Tâche 2 : Créer un compte de stockage pour tester le balisage requis
+# <a name="task-2-create-a-storage-account-to-test-the-required-tagging"></a>Tâche 2 : Créer un compte de stockage pour tester le balisage requis
 
 Au cours de cette tâche, nous allons créer des comptes de stockage pour tester le balisage requis. 
 
@@ -42,12 +48,12 @@ Au cours de cette tâche, nous allons créer des comptes de stockage pour tester
 
     | Paramètre | Valeur | 
     | --- | --- |
-    | Abonnement | **Utilisez la valeur par défaut fournie** |
+    | Abonnement | **Utiliser la valeur par défaut fournie** |
     | Groupe de ressources | **Créer un groupe de ressources** |
-    | Nom du compte de stockage | **storageaccountxxxx** |
-    | Lieu | **(États-Unis) USA Est** |
+    | Nom du compte de stockage | **compte_stockagexxxx** |
+    | Emplacement | **(États-Unis) USA Est** |
 
-3. Cliquez sur **Examiner et créer**. 
+3. Cliquez sur **Vérifier + créer**. 
 
     **Remarque :** Nous effectuons un test pour voir ce qui se passe lorsque la balise n’est pas fournie. Notez que la prise d’effet des stratégies peut parfois prendre jusqu’à 30 minutes.
 
@@ -62,15 +68,15 @@ Au cours de cette tâche, nous allons créer des comptes de stockage pour tester
 
     | Paramètre | Valeur | 
     | --- | --- |
-    | Nom de la balise | **Entreprise : Contoso** (peut ne pas figurer dans la liste déroulante) |
+    | Nom de la balise | **Company:Contoso** (peut ne pas se trouver dans la liste déroulante) |
 
 6. Cliquez sur **Examiner et créer** et vérifiez que la validation a réussi. Cliquez sur **Créer** pour déployer le compte de stockage. 
 
-# Tâche 3 : Afficher toutes les ressources avec une balise spécifique
+# <a name="task-3-view-all-resources-with-a-specific-tag"></a>Tâche 3 : Afficher toutes les ressources avec une balise spécifique
 
 1. Dans le portail Azure, dans le panneau **Tous les services**, recherchez et sélectionnez **Balises**.
 
-2. Notez toutes les balises et leurs valeurs. Cliquez sur la paire clé-valeur **Entreprise :** Paire clé-valeur **Contoso**. Un panneau présentant le compte de stockage nouvellement créé s’affiche, à condition que vous ayez inclus la balise lors de son déploiement. 
+2. Notez toutes les balises et leurs valeurs. Cliquez sur la paire clé-valeur **Company : Contoso**. Un panneau présentant le compte de stockage nouvellement créé s’affiche, à condition que vous ayez inclus la balise lors de son déploiement. 
 
    ![Capture d’écran des balises avec les options Entreprise et Contoso sélectionnées.](../images/1705.png)
 
@@ -80,7 +86,7 @@ Au cours de cette tâche, nous allons créer des comptes de stockage pour tester
 
     ![Capture d’écran du filtre Toutes les ressources avec l’option Entreprise activée.](../images/1706.png)
 
-# Tâche 4 : Supprimer l’attribution de stratégie
+# <a name="task-4-delete-the-policy-assignment"></a>Tâche 4 : Supprimer l’attribution de stratégie
 
 Au cours de cette tâche, nous allons supprimer la stratégie **Exiger une balise pour les ressources** afin de ne pas affecter nos travaux suivants. 
 
@@ -94,7 +100,7 @@ Au cours de cette tâche, nous allons supprimer la stratégie **Exiger une balis
 
 5. Si vous avez le temps, créez une autre ressource sans balise pour vous assurer que la stratégie n’est plus en vigueur.
 
-Félicitations ! Au cours de cette procédure pas à pas, nous avons créé une affectation de stratégie qui exige un balisage, créé un compte de Ressources(stockage ), testé la stratégie de balisage, affiché les ressources avec une balise spécifique et, enfin, supprimé la stratégie de balisage.
+Félicitations ! Au cours de cette procédure pas à pas, nous avons créé une affectation de stratégie qui exige un balisage, créé un compte de Ressources(stockage ), testé la stratégie de balisage, affiché les ressources avec une balise spécifique et, enfin, supprimé la stratégie de balisage.
 
 
 **Remarque** : Pour éviter des coûts supplémentaires, vous pouvez supprimer ce groupe de ressources. Recherchez des groupes de ressources, cliquez sur votre groupe de ressources, puis sur **Supprimer le groupe de ressources**. Vérifiez le nom du groupe de ressources, puis cliquez sur **Supprimer**. Surveillez les **notifications** pour voir comment se déroule la suppression.
