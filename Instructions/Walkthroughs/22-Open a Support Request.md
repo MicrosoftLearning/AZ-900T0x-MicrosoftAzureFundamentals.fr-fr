@@ -1,13 +1,19 @@
 ---
 wts:
-    title: '22 - Ouvrir une demande de support (5 min)'
-    module: 'Non utilisé actuellement dans l’examen en cours'
+  title: 22 - Ouvrir une demande de support (5 min)
+  module: Not currently utilized in current exam
+ms.openlocfilehash: 11305a9aa8296be673c3710619c2a7d1a5532d03
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907920"
 ---
-# 22 - Ouvrir une demande de support (5 min)
+# <a name="22---open-a-support-request-5-min"></a>22 - Ouvrir une demande de support (5 min)
 
 Dans cette procédure pas à pas, nous allons afficher les options de plan de support disponibles, puis nous allons nous entraîner à créer et à contrôler une nouvelle demande de support.
 
-# Tâche 1 : Afficher les options de plan de support disponibles et une demande de support technique
+# <a name="task-1-view-available-support-plan-options-and-a-technical-support-request"></a>Tâche 1 : Afficher les options de plan de support disponibles et une demande de support technique
 
 1. Connectez-vous au [**portail Azure**](https://portal.azure.com).
 
@@ -15,7 +21,7 @@ Dans cette procédure pas à pas, nous allons afficher les options de plan de su
 
 3. Prenez quelques minutes pour passer en revue les différents plans de support. Observez ce qui est inclus dans le plan **de base**. 
 
-4. Cliquez sur **+ Nouvelle demande de support**. Le ticket est créé en fonction des valeurs que vous spécifiez. 
+4. Cliquez sur **Nouvelle demande de support**. Le ticket est créé en fonction des valeurs que vous spécifiez. 
 
     | Paramètre | Valeur|
     |----|--------|
@@ -29,17 +35,17 @@ Dans cette procédure pas à pas, nous allons afficher les options de plan de su
 
 5. Cliquez sur **Suivant : Solutions >>** et lisez les solutions recommandées.
 
-6. Cliquez sur **Suivant : Détails >>**. Lorsque vous soumettrez une véritable demande de support, fournissez autant d’informations que possible pour permettre une résolution rapide du problème. Vos choix de contacts sur cette page dépendent de votre plan de support. 
+6. Cliquez sur **Suivant : Détails >>** . Lorsque vous soumettrez une véritable demande de support, fournissez autant d’informations que possible pour permettre une résolution rapide du problème. Vos choix de contacts sur cette page dépendent de votre plan de support. 
 
     **Remarque :** Nous allons terminer ici. Comprenez-vous comment soumettre une demande technique ?
 
-# Tâche 2 : Créer une demande de support pour la facturation
+# <a name="task-2-create-a-billing-support-request"></a>Tâche 2 : Créer une demande de support pour la facturation
 
 1. Retournez à la section **Nouvelle demande de support** et cliquez sur l’onglet **Général**. 
 
     | Paramètre | Valeur|
     |----|--------|
-    | Type de problème| **Facturation** |
+    | Type de problème| **Billing** |
     | Abonnement | **Choisir votre abonnement** |
     | Résumé | **Les frais mensuels ne sont pas corrects** |
     | Type de problème | **Tarification** |
@@ -55,4 +61,4 @@ Dans cette procédure pas à pas, nous allons afficher les options de plan de su
 
 Félicitations ! Vous avez affiché les options de plan de support disponibles et vous vous êtes entraîné à créer et à contrôler une nouvelle demande de support.
 
-**Remarque** : Cliquez pour plus d’informations sur la [**création d’un ticket de support Azure**](https://azure.microsoft.com/fr-fr/support/create-ticket).
+**Remarque** : Cliquez pour plus d’informations sur la [**création d’un ticket de support Azure**](https://azure.microsoft.com/en-us/support/create-ticket).

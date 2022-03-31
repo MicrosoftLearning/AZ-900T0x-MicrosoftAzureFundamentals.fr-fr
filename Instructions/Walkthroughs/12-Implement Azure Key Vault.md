@@ -1,17 +1,23 @@
 ---
 wts:
-    title: '12 - Implémenter Azure Key Vault (5 minutes)'
-    module: 'Module 04 : Description des fonctionnalités de sécurité générale et de sécurité réseau'
+  title: 12 - Implémenter Azure Key Vault (5 minutes)
+  module: 'Module 04: Describe general security and network security features'
+ms.openlocfilehash: 1381900fc934ddbc092faf42f0b0a366364a9872
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907742"
 ---
-# 12 - Implémenter Azure Key Vault (5 minutes)
+# <a name="12---implement-azure-key-vault-5-min"></a>12 - Implémenter Azure Key Vault (5 minutes)
 
 Dans cette procédure pas à pas, nous allons créer un coffre de clés Azure (Key vault), puis créer un mot de passe secret dans ce coffre de clés, fournissant un mot de passe stocké en toute sécurité et géré de manière centralisée en vue d’une utilisation dans les applications.
 
-# Tâche 1 : Créer un Azure Key Vault 
+# <a name="task-1-create-an-azure-key-vault"></a>Tâche 1 : Créer un Azure Key Vault 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 
-2. Dans le panneau **Tous les services**, recherchez et sélectionnez **Key vaults**, puis sélectionnez **+Ajouter +Nouveau +Crér**.
+2. Dans le panneau **Tous les services**, recherchez et sélectionnez **Key vaults**, puis sélectionnez **+Ajouter +Nouveau +Créer **.
 
 3. Configurer le coffre de clés (remplacer **xxxx** dans le nom du coffre de clés par des lettres et des chiffres pour que le nom soit unique au monde). Laissez les valeurs par défaut pour tous les autres éléments.
 
@@ -20,7 +26,7 @@ Dans cette procédure pas à pas, nous allons créer un coffre de clés Azure (K
     | Abonnement | **Utilisez la valeur par défaut fournie** |
     | Groupe de ressources | **Créer un groupe de ressources** |
     | Nom du coffre de clés | **keyvaulttestxxx** |
-    | Lieu | **USA Est** |
+    | Location | **USA Est** |
     | Niveau tarifaire | **Standard** |
     
     **Remarque** remplacez **xxxx** afin de créer un nom unique.
@@ -34,7 +40,7 @@ Dans cette procédure pas à pas, nous allons créer un coffre de clés Azure (K
 
     **Remarque** : Votre compte Azure est le seul autorisé à effectuer des opérations sur ce nouveau coffre. Vous pouvez le modifier si vous le souhaitez dans les **Paramètres** puis dans la section **Stratégies d’accès**.
 
-# Tâche 2 : Ajouter un secret au coffre de clés
+# <a name="task-2-add-a-secret-to-the-key-vault"></a>Tâche 2 : Ajouter un secret au coffre de clés
         
 Dans cette tâche, nous ajouterons un mot de passe au coffre à clés. 
 
@@ -46,7 +52,7 @@ Dans cette tâche, nous ajouterons un mot de passe au coffre à clés.
     | --- | --- |
     | Options de chargement | **Manuel** |
     | Nom | **ExamplePassword** |
-    | Valeur | **hVFkk96** |
+    | Value | **hVFkk96** |
 
 3. Cliquez sur **Créer**.
 

@@ -1,13 +1,19 @@
 ---
 wts:
-    title: '11 - Créer une machine virtuelle avec la CLI (10 min)'
-    module: 'Module 03 - Décrire les solutions principales et les outils de gestion'
+  title: 11 - Créer une machine virtuelle avec la CLI (10 min)
+  module: 'Module 03: Describe core solutions and management tools'
+ms.openlocfilehash: 6e88e520011ccf4f1d02fd14038a457226492082
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137908000"
 ---
-# 11 - Créer une machine virtuelle avec la CLI (10 min)
+# <a name="11---create-a-vm-with-the-cli-10-min"></a>11 - Créer une machine virtuelle avec la CLI (10 min)
 
 Dans cette procédure pas à pas, nous allons configurer Cloud Shell, utiliser Azure CLI pour créer un groupe de ressources et une machine virtuelle et passer en revue les recommandations Azure Advisor. 
 
-# Tâche 1 : Configurer Cloud Shell 
+# <a name="task-1-configure-the-cloud-shell"></a>Tâche 1 : Configurer Cloud Shell 
 
 Dans cette tâche, nous configurer Cloud Shell., puis nous utiliserons Azure CLI pour créer un groupe de ressources et une machine virtuelle.  
 
@@ -17,7 +23,7 @@ Dans cette tâche, nous configurer Cloud Shell., puis nous utiliserons Azure CLI
 
     ![Capture d’écran de l’icône Azure Cloud Shell dans le portail Azure.](../images/1002.png)
    
-3. Dans la boîte de dialogue Bienvenue dans Azure Cloud Shell , lorsque vous serez invité à sélectionner **Bash** ou **PowerShell**, sélectionnez **Bash**. 
+3. Dans la boîte de dialogue Bienvenue dans Azure Cloud Shelll, lorsque vous serez invité à sélectionner **Bash** ou **PowerShell**, sélectionnez **Bash**. 
 
 4. Une nouvelle fenêtre affiche le message **Vous n’avez aucun stockage monté**. Sélectionnez **Paramètres avancés**.
 
@@ -27,7 +33,7 @@ Dans cette tâche, nous configurer Cloud Shell., puis nous utiliserons Azure CLI
     - Partage de fichiers : Créez un nouveau partage et nommez-le cloudshellfileshare
 
 
-# Tâche 2 : Utilisez CLI pour créer une machine virtuelle
+# <a name="task-2-use-cli-to-create-a-virtual-machine"></a>Tâche 2 : Utilisez CLI pour créer une machine virtuelle
 
 Dans cette tâche, nous utiliserons Azure CLI pour créer un groupe de ressources et une machine virtuelle.
 
@@ -65,7 +71,7 @@ Dans cette tâche, nous utiliserons Azure CLI pour créer un groupe de ressource
     ![Capture d’écran de la page des machines virtuelles avec myVMPS en cours d’exécution.](../images/1101.png)
 
 
-# Tâche 3 : Exécuter des commandes dans Cloud Shell
+# <a name="task-3-execute-commands-in-the-cloud-shell"></a>Tâche 3 : Exécuter des commandes dans Cloud Shell
 
 Dans cette tâche, nous nous entraînerons à exécuter des commandes CLI à partir de Cloud Shell. 
 
@@ -91,7 +97,7 @@ Dans cette tâche, nous nous entraînerons à exécuter des commandes CLI à par
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-# Tâche 4 : Consultation des suggestions d’Azure Advisor
+# <a name="task-4-review-azure-advisor-recommendations"></a>Tâche 4 : Consulter les suggestions dans Azure Advisor
 
 Dans cette tâche, nous passerons en revue les recommandations présentées dans Azure Advisor.
 
@@ -101,17 +107,17 @@ Dans cette tâche, nous passerons en revue les recommandations présentées dans
 
 2. Dans le panneau **Advisor**, sélectionnez **Vue d’ensemble**. Les suggestions sont regroupées par fiabilité, sécurité, niveau de performance et coût. 
 
-    ![Capture d’écran de la page Vue d’ensemble d’Advisor](../images/1103.png)
+    ![Capture d’écran de la page Vue d’ensemble d’Advisor ](../images/1103.png)
 
 3. Sélectionnez **Toutes les suggestions** et prenez le temps de consulter toutes les suggestions et actions suggérées. 
 
     **Remarque :** Selon vos ressources, vos suggestions peuvent être différentes. 
 
-    ![Capture d’écran de la page Toutes les suggestions Advisor.](../images/1104.png)
+    ![Capture d’écran de la page Toutes les suggestions Advisor. ](../images/1104.png)
 
 4. Notez que vous pouvez télécharger les suggestions au format CSV ou PDF. 
 
-5. Notez que vous pouvez créer des alertes. 
+5. Notez également que vous pouvez créer des alertes. 
 
 6. Si vous avez le temps, continuez à expérimenter Azure CLI. 
 

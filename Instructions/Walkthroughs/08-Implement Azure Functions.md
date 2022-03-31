@@ -1,33 +1,39 @@
 ---
 wts:
-    title: '08 - Implémenter Azure Functions (5 minutes)'
-    module: 'Module 03 : Décrire les solutions principales et les outils de gestion'
+  title: « 08 - Implémenter Azure Functions (5 minutes) »
+  module: 'Module 03: Describe core solutions and management tools'
+ms.openlocfilehash: 419d49832a4059e447d2621fe4f209dc5ada2474
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907765"
 ---
-# 08 - Implémenter Azure Functions (5 minutes)
+# <a name="08---implement-azure-functions-5-min"></a>« 08 - Implémenter Azure Functions (5 minutes) »
 
 Dans cette procédure pas à pas, nous allons créer une application de fonction pour afficher un message Hello en cas de requête HTTP. 
 
-# Tâche 1 : Créer une application de fonction 
+# <a name="task-1-create-a-function-app"></a>Tâche 1 : Créer une application de fonction 
 
 Dans cette tâche, nous allons créer une application de fonction.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com).
 
-2. Dans la **barre de recherche** située en haut du portail, recherchez et sélectionnez **Function App** puis, dans le panneau **Function App**, cliquez sur **+ Ajouter**, **+ Créer**, **+ Nouveau**.
+2. Dans la **barre de recherche** située en haut du portail, recherchez et sélectionnez **Function App** puis, dans le panneau **Function App**, cliquez sur **+ Ajouter, + Créer, + Nouveau**.
 
 3. Sous l’onglet **Bases** du panneau **Application de fonction**, spécifiez les paramètres suivants (remplacez **xxxx** dans le nom de la fonction par des lettres et des chiffres de façon à ce que le nom soit unique au monde et maintenez les valeurs par défaut de tous les autres paramètres) : 
 
     | Paramètres | Valeur |
     | -- | --|
     | Abonnement | **Utilisez la valeur par défaut fournie** |
-    | Groupe de ressources | **Créer un groupe de ressources** |
-    | Nom de l’application de fonction | **fonction-xxxx** |
+    | Resource group | **Créer un groupe de ressources** |
+    | Nom de l’application de fonction | **function-xxxx** |
     | Publier | **Code** |
     | Pile d’exécution | **.NET** |
-    | Version | **3,1** |
+    | Version | **3.1** |
     | Région | **USA Est** |
 
-    **Remarque** - Veillez à modifier la valeur **xxxx** pour créer un **nom d’application de fonction** unique
+    **Remarque** - Veillez à modifier la valeur **xxxx** pour créer un **Nom d’application de fonction** unique
 
 4. Cliquez sur **Examiner et créer** puis, après la validation, cliquez sur **Créer** pour commencer l’approvisionnement et le déploiement de votre nouvelle application de fonction Azure.
 
@@ -37,17 +43,17 @@ Dans cette tâche, nous allons créer une application de fonction.
 
     ![Capture d’écran de la page Function App avec la nouvelle application de fonction.](../images/0701.png)
 
-# Tâche 2 : Créer une fonction déclenchée par requête HTTP et la tester
+# <a name="task-2-create-a-http-triggered-function-and-test"></a>Tâche 2 : Créer une fonction déclenchée par requête HTTP et la tester
 
 Dans cette tâche, nous allons utiliser la fonction Webhook + API pour afficher un message en cas de requête HTTP. 
 
 1. Dans le panneau **Application de fonction**, cliquez sur l’application de fonction nouvellement créée. 
 
-2. Dans le panneau Function App, dans la section **Functions** (Fonctions), cliquez sur **Functions** (Fonctions), puis sur **+ Ajouter**, **+ Créer**, **+ Nouveau**.
+2. Dans le panneau Function App, dans la section **Fonctions**, cliquez sur **Fonctions**, puis sur **+ Ajouter, + Créer, + Nouveau**.
 
     ![Capture d’écran de l’étape de choix d’un environnement de développement dans les fonctions Azure pour le volet Mise en route de dot net dans le portail Azure. Les éléments d’affichage pour créer une nouvelle fonction dans le portail sont mis en surbrillance. Les éléments en surbrillance sont le développement de l’application de fonction, l’ajout d’une nouvelle fonction dans le portail et le bouton Continuer.](../images/0702.png)
 
-3. La fenêtre contextuelle **Ajouter une fonction** s’affiche dans le volet droit. Dans la section **Sélectionner un modèle**, cliquez sur **Déclencheur HTTP**. Cliquez sur **Ajouter**. 
+3. La fenêtre contextuelle **Ajouter une fonction** s'affiche dans le volet droit. Dans la section **Sélectionner un modèle**, cliquez sur **Déclencheur HTTP**. Cliquez sur **Ajouter** 
 
     ![Capture d’écran de l’étape de création d’une fonction dans les fonctions Azure pour le volet Mise en route de dot net dans le portail Azure. La fiche de déclenchement HTTP est en surbrillance pour illustrer les éléments d’affichage utilisés pour ajouter un nouveau webhook à une fonction Azure.](../images/0702a.png)
 
@@ -73,7 +79,7 @@ Dans cette tâche, nous allons utiliser la fonction Webhook + API pour afficher 
 
     ![Capture d’écran d’une URL de fonction en surbrillance et d’un exemple de nom d’utilisateur ajouté dans la barre d’adresse d’un navigateur web. Le message de type Hello et le nom d’utilisateur sont également mis en surbrillance pour illustrer la sortie de la fonction dans la fenêtre principale du navigateur.](../images/0707.png)
 
-10. Lorsque vous appuyez sur Entrée, votre fonction est exécutée et toutes les invocations sont tracées. Pour visualiser le traçage, revenez dans le portail **httpTrigger1 \|** Panneau **Code + Test** et cliquez sur **Contrôler**. Vous pouvez **configurer** Application Insights en sélectionnant l’horodatage et en cliquant sur **Exécuter la requête dans Application Insights**.
+10. Lorsque vous appuyez sur Entrée, votre fonction est exécutée et toutes les invocations sont tracées. Pour afficher les traces, retournez dans le panneau **HttpTrigger1 \| Code + test** du portail, puis cliquez sur **Analyser**. Vous pouvez **configurer** Application Insights en sélectionnant le timestamp, puis cliquer sur **Exécuter une requête dans Application Insights**.
 
     ![Capture d’écran d’un journal d’informations de traçage résultant de l’exécution de la fonction dans l’éditeur de fonction du portail Azure.](../images/0709.png) 
 

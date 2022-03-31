@@ -1,13 +1,19 @@
 ---
 wts:
-    title: '17 - Créer une stratégie Azure (10 minutes)'
-    module: 'Module 05 - Description des fonctionnalités d’identité, de gouvernance, de confidentialité et de conformité'
+  title: 17 - Créer une stratégie Azure (10 minutes)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
+ms.openlocfilehash: 2811044ec560b0ac42f49a578666ed1694feb32a
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907933"
 ---
-# 17 - Créer une stratégie Azure (10 minutes)
+# <a name="17---create-an-azure-policy-10-min"></a>17 - Créer une stratégie Azure (10 minutes)
 
-Dans cette procédure pas à pas, nous allons créer une stratégie Azure Policy pour limiter le déploiement des ressources Azure à un emplacement spécifique.
+Dans cette procédure pas à pas, nous allons créer une stratégie Azure pour limiter le déploiement des ressources Azure à un emplacement spécifique.
 
-# Tâche 1 : Créer une affectation de stratégie 
+# <a name="task-1-create-a-policy-assignment"></a>Tâche 1 : Créer une affectation de stratégie 
 
 Au cours de cette tâche, nous allons configurer la stratégie d’emplacements autorisés et l’affecter à notre abonnement. 
 
@@ -25,24 +31,24 @@ Au cours de cette tâche, nous allons configurer la stratégie d’emplacements 
     | --- | --- |
     | Étendue| **Utilisez la valeur par défaut sélectionnée**|
     | Définition de stratégie | cliquez sur les ellipses, puis recherchez **Emplacements autorisés** puis **sélectionnez** |
-    | Nom de l’attribution | **Emplacements autorisés** |
+    | Nom de l'attribution | **Emplacements autorisés** |
     
     ![Capture d’écran du volet Étendue avec ses champs renseignés et le bouton Sélectionner activé. ](../images/1402.png)
 6. Sous l’onglet **Paramètres**, sélectionnez **Japon de l’Ouest**. Cliquez sur **Examiner et créer**, puis sur **Créer**.
 
     **Remarque** : Une étendue détermine les ressources ou le regroupement de ressources auquel l’attribution de stratégie s’applique. Dans notre cas, nous pourrions attribuer cette stratégie à un groupe de ressources spécifique, mais nous avons choisi de l’affecter au niveau de l’abonnement. N’oubliez pas que des ressources peuvent être exclues en fonction de la configuration de l’étendue. Les exclusions sont facultatives.
 
-    **Remarque** : Cette définition de stratégie **Emplacements autorisés** spécifie un emplacement dans lequel toutes les ressources doivent être déployées. Si un autre emplacement est choisi, le déploiement ne sera pas autorisé. Pour plus d’informations, consultez la page [Exemples Azure Policy](https://docs.microsoft.com/fr-fr/azure/governance/policy/samples/index).
+    **Remarque** : Cette définition de stratégie **Emplacements autorisés** spécifie un emplacement dans lequel toutes les ressources doivent être déployées. Si un autre emplacement est choisi, le déploiement ne sera pas autorisé. Pour plus d’informations, consultez la page [Exemples de stratégies Azure](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index).
 
    ![Capture d’écran du volet Définitions disponibles avec différents champs mis en évidence et l’option Auditer les machines virtuelles qui n’utilisent pas de disques managés activée.](../images/1403.png)
 
 9. L’attribution de stratégie **Emplacements autorisés** est à présent répertoriée dans le volet **Stratégie - Attributions** et applique la stratégie au niveau d’étendue spécifié (Abonnement).
 
-# Tâche 2 : Tester la stratégie de localisation autorisée
+# <a name="task-2-test-allowed-location-policy"></a>Tâche 2 : Tester la stratégie de localisation autorisée
 
 Dans cette tâche, nous allons tester la stratégie de localisation autorisée. 
 
-1. Dans le portail Azure, dans le panneau **Tous les services**, recherchez et sélectionnez **Comptes de stockage**, puis cliquez sur **+Crér**.
+1. Dans le portail Azure, dans le panneau **Tous les services**, recherchez et sélectionnez **Comptes de stockage**, puis cliquez sur **+Créer**.
 
 2. Configurez le compte de stockage (remplacez **xxxx** dans le nom du compte de stockage par des lettres et des chiffres afin que le nom soit unique au monde). Laissez les valeurs par défaut pour tous les autres éléments. 
 
@@ -50,14 +56,14 @@ Dans cette tâche, nous allons tester la stratégie de localisation autorisée.
     | --- | --- |
     | Abonnement | **Utilisez les valeurs par défaut fournies** |
     | Groupe de ressources | **myRGPolicy** (création) |
-    | Nom du compte de stockage | **storageaccountxxxx** |
-    | Lieu | **États-Unis de l’Est** |
+    | Nom du compte de stockage | **compte_stockagexxxx** |
+    | Emplacement | **(États-Unis) USA Est** |
 
-3. Cliquez sur **Examiner et créer**, puis cliquez sur **Créer**. 
+3. Cliquez sur **Vérifier + créer**, puis sur **Créer**. 
 
 4. Vous recevrez le message d’erreur **Échec du déploiement** spécifiant que la ressource a été désallouée par une stratégie, par exemple la stratégie **Emplacements autorisés**.
 
-# Tâche 3 : Supprimer l’attribution de stratégie
+# <a name="task-3-delete-the-policy-assignment"></a>Tâche 3 : Supprimer l’attribution de stratégie
 
 Dans cette tâche, nous allons supprimer l’attribution et le test de la stratégie de localisation autorisée. 
 
@@ -71,7 +77,7 @@ Nous allons supprimer l’attribution de stratégie pour ne pas risquer d’êtr
  
 2. Cliquez sur **Emplacements autorisés** pour ouvrir la fenêtre Conformité à la stratégie Emplacements autorisés.
 
-3. Cliquez sur **Supprimer l’affectation** dans le menu principal. Confirmez que vous souhaitez supprimer l’attribution de stratégie en cliquant sur **Oui**
+3. Cliquez sur **Supprimer l’affectation** dans le menu principal. Confirmez que vous souhaitez supprimer l'attribution de stratégie en cliquant sur **Oui**
 
    ![Capture d’écran de l’élément de menu Supprimer l’affectation.](../images/1407.png)
 
@@ -81,6 +87,6 @@ Nous allons supprimer l’attribution de stratégie pour ne pas risquer d’êtr
     - *Suivi des coûts* : Vous pourriez avoir plusieurs abonnements pour différents emplacements régionaux. La stratégie garantit que toutes les ressources sont déployées dans la région prévue pour faciliter le suivi des coûts. 
     - *Résidence des données et conformité de la sécurité* : Vous pourriez également avoir des besoins en matière de résidence des données, créer des abonnements par client ou des charges de travail spécifiques, et déterminer que toutes les ressources doivent être déployées dans un centre de données particulier pour garantir le respect des exigences relatives à la conformité des données et de la sécurité.
 
-Félicitations ! Vous avez créé une Azure Policy pour limiter le déploiement des ressources Azure à un centre de données particulier.
+Félicitations ! Vous avez créé une stratégie Azure pour limiter le déploiement des ressources Azure à un centre de données particulier.
 
 **Remarque** : Pour éviter des coûts supplémentaires, vous pouvez supprimer ce groupe de ressources. Recherchez des groupes de ressources, cliquez sur votre groupe de ressources, puis sur **Supprimer le groupe de ressources**. Vérifiez le nom du groupe de ressources, puis cliquez sur **Supprimer**. Surveillez les **notifications** pour voir comment se déroule la suppression.

@@ -1,42 +1,48 @@
 ---
 wts:
-    title: '21 - Calculer des SLA composites (5 min)'
-    module: 'Module 06 - Description de la gestion des coûts Azure et des contrats de niveau de service'
+  title: 21 - Calculer des SLA composites (5 min)
+  module: 'Module 06: Describe Azure cost management and service level agreements'
+ms.openlocfilehash: 1d27d18cd1a0b2ad6ab09c7fc65a51d5a8f13711
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907432"
 ---
-# 21 - Calculer des SLA composites (5 min)
+# <a name="21---calculate-composite-slas-5-min"></a>21 - Calculer des SLA composites (5 min)
 
 Dans cette procédure pas à pas, nous allons déterminer le contrat de niveau de service de disponibilité des services Azure, puis calculer la disponibilité attendue basée sur le contrat de niveau de service composite de l’application.
 
 Notre exemple d’application se compose de ces services Azure. Nous n’entrerons pas dans une configuration et des considérations architecturales profondes. L’intention ici est de donner un exemple de haut niveau.
 
-+ **App service** : Pour héberger l’application.
++ **App Service** : Pour héberger l’application.
 + **Azure AD B2C** : Pour authentifier les connexions utilisateur et gérer les profils.
 + **Application Gateway** : Pour gérer l’accès aux applications et leur mise à l’échelle. 
-+ **Base de données Azure SQL** : Pour stocker les données d’application. 
++ **Azure SQL Database** : Pour stocker les données d’application. 
 
-# Tâche 1 : Déterminer les valeurs de pourcentage de la durée active du contrat de niveau de service pour notre application
+# <a name="task-1-determine-the-sla-uptime-percentage-values-for-our-application"></a>Tâche 1 : Déterminer les valeurs de pourcentage de la durée active du contrat de niveau de service pour notre application
 
-1. Dans un navigateur, accédez à la page [Résumé SLA pour les services Azure](https://azure.microsoft.com/fr-fr/support/legal/sla/summary/).
+1. Dans un navigateur, accédez à la page [Résumé SLA pour les services Azure](https://azure.microsoft.com/en-us/support/legal/sla/summary/).
 
-2. Localisez la valeur de durée active du contrat de niveau de service **App Service**, **99,95 %**. Cliquez sur **Voir tous les détails**, puis développez la section **Détails SLA**. Remarquez les **pourcentages de durée active mensuels** et les **crédits de service**.
+2. Localisez la valeur de durée active du contrat de niveau de service **App Service**, **99,95 %** . Cliquez sur **Voir tous les détails**, puis développez la section **Détails SLA**. Remarquez les **pourcentages de durée active mensuels** et les **crédits de service**.
 
-3. Revenez à la page Web SLA et localisez le service **Azure Active Directory B2C** puis déterminez la valeur de durée active du contrat SLA, **99,9 %**. 
+3. Revenez à la page Web SLA et localisez le service **Azure Active Directory B2C** puis déterminez la valeur de durée active du contrat SLA, **99,9 %** . 
 
-4. Localisez la valeur de durée active du contrat de niveau de service de l’**Application Gateway**, **99,95 %**. 
+4. Localisez la valeur de durée active du contrat de niveau de service de l’**Application Gateway**, **99,95 %** . 
 
-5. La base de données Azure SQL utilise des niveaux Premium mais n’est pas configurée pour les déploiements redondants de zone. Localisez la valeur de durée active du contrat de niveau de service de **base de données SQL Azure**, **99,99 %**. 
+5. La base de données Azure SQL utilise des niveaux Premium mais n’est pas configurée pour les déploiements redondants de zone. Localisez la valeur de durée active du contrat de niveau de service de **base de données SQL Azure**, **99,99 %** . 
 
     **Remarque** : Il existe différentes valeurs de durée active pour divers déploiements et configurations de la base de données Azure SQL. Il est important de clarifier vos valeurs de durée active requises lorsque vous planifiez et évaluez votre déploiement et votre configuration. De petits changements dans la durée active peuvent avoir un impact sur les coûts de service et potentiellement augmenter la complexité de la configuration. Certains autres services intéressants apparaissent sur la page web du résumé SLA Azure : **Machines virtuelles**, **Comptes de stockage** et **Cosmos DB**.
 
-# Tâche 2 : Calculer le pourcentage de temps de fonctionnement du contrat SLA composite de l’application
+# <a name="task-2-calculate-the-application-composite-sla-percentage-uptime"></a>Tâche 2 : Calculer le pourcentage de temps de fonctionnement du contrat SLA composite de l’application
 
 1. Si l’un des services qui composent notre application n’est pas disponible, notre application ne sera pas disponible pour la connexion et l’utilisation. En définitive, le temps de fonctionnement total de notre application se calcule sur la base des éléments suivants :
 
-    **% de temps de fonctionnement d’App Service** X **% de temps de fonctionnement d’Azure AD B2C** X **% de temps de fonctionnement d’Application Gateway Azure** X **% de temps de fonctionnement de la base de données SQL Azure** = **% de temps de fonctionnement**
+    **% de temps de fonctionnement d’App Service** X **% de temps de fonctionnement d’Azure AD B2C** X **% de temps de fonctionnement d’Application Gateway Azure** X **% de temps de fonctionnement de la base de données SQL Azure** =  **% de temps de fonctionnement**
 
     qui, en pourcentage, se définit comme suit :
 
-    **99,95 %** X **99,9 %** X **99,95 %** X **99,99 %** = **99,79 %**
+    **99,95 %** X **99,9 %** X **99,95 %** X **99,99 %**  = **99,79 %**
 
     Il s’agit de la disponibilité attendue, telle que définie dans le contrat SLA de notre application, avec les services et l’architecture actuels.
 

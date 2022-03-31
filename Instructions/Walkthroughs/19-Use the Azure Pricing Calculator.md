@@ -1,19 +1,25 @@
 ---
 wts:
-    title: '19 - Utiliser la calculatrice de prix Azure (10 minutes)'
-    module: 'Module 06 : Description de la gestion des coûts Azure et des contrats de niveau de service'
+  title: 19 - Utiliser la calculatrice de prix Azure (10 minutes)
+  module: 'Module 06: Describe Azure cost management and service level agreements'
+ms.openlocfilehash: 9b071ca3caa80cc8f78541a61010b5b2d0fe8053
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137907872"
 ---
-# 19 - Utiliser la calculatrice de prix (10 minutes)
+# <a name="19---use-the-pricing-calculator-10-min"></a>19 - Utiliser la calculatrice de prix (10 minutes)
 
 Dans cette procédure pas à pas, nous utiliserons la calculatrice de prix Azure pour générer une estimation des coûts pour une machine virtuelle Azure et les ressources réseau associées.
 
-# Tâche 1 : Configurer la calculatrice de prix
+# <a name="task-1-configure-the-pricing-calculator"></a>Tâche 1 : Configurer la calculatrice de prix
 
 Dans cette tâche, nous allons estimer le coût d’un échantillon d’infrastructure à l’aide de la calculatrice de prix Azure. 
 
 **Remarque** : Pour créer une estimation de la calculatrice de prix Azure, cette procédure pas à pas donne des exemples de configurations pour la machine virtuelle et les ressources associées. Utilisez cet exemple de configurations ou fournissez au calculateur de prix appliqués Azure des détails sur vos besoins *réels* en ressources.
 
-1. Dans un navigateur, accédez à la page Web [Calculateur de prix appliqués Azure](https://azure.microsoft.com/fr-fr/pricing/calculator/).
+1. Dans un navigateur, accédez à la page Web [Calculateur de prix appliqués Azure](https://azure.microsoft.com/en-us/pricing/calculator/).
 
 2. Pour ajouter des détails sur votre configuration de machine virtuelle, cliquez sur **Machines virtuelles**, sous l’onglet **Produits**. Faites défiler vers le bas pour afficher les détails de la machine virtuelle. 
 
@@ -27,13 +33,13 @@ Dans cette tâche, nous allons estimer le coût d’un échantillon d’infrastr
     | -- | -- |
     | Région | **Europe Nord** |
     | Système d’exploitation | **Windows** |
-    | Type | **(OS uniquement)** |
+    | Type | **(Système d’exploitation uniquement)** |
     | Niveau | **Standard** |  
-    | Instance | **A2 : 2 cœurs, 3,5 Go de RAM, 135 Go de stockage temporaire** |
+    | Instance | **R2 : 2 cœurs, 3,5 Go de RAM, 135 Go de stockage temporaire** |
 
    ![Capture d’écran de la zone de configuration de la machine virtuelle dans la page Web d’estimation de la calculatrice de prix Azure. Les exemples en surbrillance de valeurs de propriété de configuration de la machine virtuelle saisies par l’utilisateur indiquent comment spécifier une configuration de la machine virtuelle dans une estimation de la calculatrice de prix Azure.](../images/1902.png)
 
-    **Remarque** : Les spécifications et les prix appliqués des instances de machine virtuelle peuvent différer de ceux de cet exemple. Suivez cette procédure pas à pas en choisissant une instance qui correspond le plus possible à l’exemple. Pour afficher les détails des différentes options de machine virtuelle, choisissez **Détails du produit** dans le menu **Plus d’informations** affiché dans le volet de droite.
+    **Remarque** : Les spécifications et les prix appliqués des instances de machine virtuelle peuvent différer de ceux de cet exemple. Suivez cette procédure pas à pas en choisissant une instance qui correspond le plus possible à l'exemple. Pour afficher les détails des différentes options de machine virtuelle, choisissez **Détails du produit** dans le menu **Plus d’informations** affiché dans le volet de droite.
 
 5. Définissez la valeur de l’option **Facturation** sur **Paiement à l’utilisation**.
 
@@ -45,11 +51,11 @@ Dans cette tâche, nous allons estimer le coût d’un échantillon d’infrastr
 
    ![Capture d’écran de la zone des options de facturation de la machine virtuelle dans la page web d’estimation de la calculatrice de prix Azure. Le nombre d’instances de machines virtuelles et d’heures par mois en surbrillance indique comment spécifier le nombre d’instances et d’heures par mois pour une machine virtuelle dans une estimation de la calculatrice de prix Azure.](../images/1904.png)
 
-7. Dans le volet **Disques de système d’exploitation gérés**, modifiez la configuration de stockage de la machine virtuelle par défaut.
+7. Dans le volet **Disques de système d'exploitation gérés**, modifiez la configuration de stockage de la machine virtuelle par défaut.
 
     | Niveau | Taille du disque | Nombre de disques | Instantané | Transactions de stockage |
     | ---- | --------- | --------------- | -------- | -------------------- |
-    | HDD Standard | S30 : 1024 Gio | 1 | Désactivé | 10 000 |
+    | HDD Standard | S30 : 1 024 Gio | 1 | Désactivé | 10 000 |
 
    ![Capture d’écran de la zone d’options des disques du système d’exploitation gérés sur la page web d’estimation de la calculatrice de prix Azure. Les options mentionnant le type de niveau, la taille du disque, le nombre de disques et le nombre de transactions de stockage qui sont mises en surbrillance indiquent comment spécifier une configuration de stockage pour une machine virtuelle dans une estimation de la calculatrice de prix Azure.](../images/1905.png)
 
@@ -61,7 +67,7 @@ Dans cette tâche, nous allons estimer le coût d’un échantillon d’infrastr
 
     | Région | Montant du transfert de données sortantes de la zone 1 |
     | ------ | -------------------------------------- |
-    | Europe Nord | 50 Mo |
+    | Europe Nord | 50 Go |
 
    ![Capture d’écran de la zone de configuration de la bande passante de mise en réseau dans la page web d’estimation de la calculatrice de prix Azure. Les exemples mis en évidence de valeurs de propriété de bande passante saisies par l’utilisateur indiquent comment spécifier une configuration de bande passante pour une machine virtuelle dans une estimation de la calculatrice de prix Azure.](../images/1907.png)
 
@@ -74,17 +80,17 @@ Dans cette tâche, nous allons estimer le coût d’un échantillon d’infrastr
     | Paramètres | Valeur |
     | -- | -- |
     | Région | **Europe Nord** |
-    | Niveau | **Élémentaire** |
-    | Taille | **Petit** |
+    | Niveau | **De base** |
+    | Taille | **Petite** |
     | Instances | **1** |  
     | Heures | **365** |
-    | Données traitées | **50 Mo** |
-    | Zone 1 : Amérique du Nord, Europe | **50 Mo**|
+    | Données traitées | **50 Go** |
+    | Zone 1 : Amérique du Nord, Europe | **50 Go**|
 
     ![Capture d’écran de la zone de configuration de l’Application Gateway dans la page Web d’estimation de la calculatrice de prix appliqués Azure.](../images/1909.png)
 
 
-# Tâche 2 : Revoir l’estimation des prix appliqués
+# <a name="task-2-review-the-pricing-estimate"></a>Tâche 2 : Revoir l’estimation des prix appliqués
 
 Dans cette tâche, nous allons examiner les résultats de la calculatrice de prix appliqués Azure. 
 
@@ -94,7 +100,7 @@ Dans cette tâche, nous allons examiner les résultats de la calculatrice de pri
 
 2. Modifiez la devise en Euro, puis sélectionnez **Exporter** pour télécharger une copie de l’estimation pour une consultation hors ligne au format Microsoft Excel (`.xlsx`).
 
-    ![Capture d’écran du total des coûts mensuels estimés sur la page web d’estimation de la calculatrice de prix Azure. L’option de devise Euro mise en évidence indique comment modifier la devise utilisée dans une estimation de la calculatrice de prix Azure. L’option d’exportation en surbrillance illustre comment télécharger une copie d’une estimation pour une consultation hors ligne.](../images/1910.png)
+    ![Capture d'écran du total des coûts mensuels estimés sur la page web d’estimation de la calculatrice de prix Azure. L’option de devise Euro mise en évidence indique comment modifier la devise utilisée dans une estimation de la calculatrice de prix Azure. L’option d’exportation en surbrillance illustre comment télécharger une copie d’une estimation pour une consultation hors ligne.](../images/1910.png)
 
     ![Capture d’écran d’un exemple d’estimation de la calculatrice de prix Azure dans Microsoft Excel.](../images/1911.png)
 
