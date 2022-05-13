@@ -2,12 +2,12 @@
 wts:
   title: 01 - Créez une machine virtuelle dans le portail (10 min)
   module: Module 02 - Core Azure Services (Workloads)
-ms.openlocfilehash: 2e2a613f965d41405b025166876b28be391f10d8
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.openlocfilehash: 010d6a19a66f6ac92627720379a4eb850b2ee423
+ms.sourcegitcommit: 4a0bfef63f98844f16e2a364d156e96382b8fac5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137907885"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "144556868"
 ---
 # <a name="01---create-a-virtual-machine-in-the-portal-10-min"></a>01 - Créez une machine virtuelle dans le portail (10 min)
 
@@ -18,7 +18,7 @@ Au cours de cette procédure pas à pas, nous allons créer une machine virtuell
 # <a name="task-1-create-the-virtual-machine"></a>Tâche 1 : Créer la machine virtuelle 
 1. Connectez-vous au portail Azure : **https://portal.azure.com**
 
-3. Dans le panneau **Tous les services** du menu Portail, recherchez et sélectionnez **Machines virtuelles**, puis cliquez sur **+Ajouter, +Créer, +Nouveau** et choisissez **+Machine virtuelle** dans le menu déroulant.
+3. Dans le panneau **Tous les services** du menu du portail, recherchez et sélectionnez **Machines virtuelles**, puis cliquez sur **+Créer** et choisissez **+Machine virtuelle Azure** dans le menu déroulant.
 
 4. Sous l’onglet **Informations de base** renseignez les informations suivantes (conservez les valeurs par défaut pour toutes les autres options) :
 
